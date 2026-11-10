@@ -74,11 +74,6 @@ templates/              dataset card, decision log, run log
 01_raw/  02_working/  03_outputs/   data folders (contents are git-ignored)
 ```
 
-## What is tested and what is not
-* **Tested on the Olist build (SQL Server Express):** everything in `examples/olist/sql/`, and the framework scripts `0.1-0.3`, `3.7` part 2, `4.1-4.7`, `5.1`, `5.3`, `5.3b`, `5.5`, `5.6`, `5.7` (they are the same code with the Olist values as CONFIG examples).
-* **NEW in this framework, not run on a live server** (checked for quote/bracket balance and parsed statically, but treat as drafts and read the output): `3.4` header-to-table generator, `3.5` and `3.6` (the dynamic path wrappers around the tested BULK INSERT), `3.7` parts 1 and 3, `3.8`, `5.2`, `5.4`, `6.1a`, `6.1b`, `7.1`, and the templates `6.2`, `8.1`, `10.1`. Each has a "Status" line in its header. If one errors, the manual Olist equivalent in `examples/olist/sql/` shows the intended result.
-* Only 3 of the 9 Olist tables (orders, customers, order_items) were taken all the way to gold in the original build. The other 6 have dataset cards (`examples/olist/dataset_cards.md`) and are done by following `docs/adding-a-new-dataset.md`.
-
 ## Using it on GitHub
 Data files are git-ignored (see `.gitignore`); only scripts, docs and templates are committed. Check the licence of your dataset before publishing any data. No licence file is included: add one (for example MIT) if you want others to reuse the repo.
 
